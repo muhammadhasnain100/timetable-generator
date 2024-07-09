@@ -14,8 +14,8 @@ def count_words(input_text):
 
 # llama3 70b generate chat completion
 def llama3_generate(available_teachers, available_rooms):
-    if len(available_teachers) > 50 or len(available_rooms) > 50:
-        return "One or both of the DataFrames exceed the maximum row limit of 50. Cannot process the request."
+    if len(available_teachers) > 60 or len(available_rooms) > 60:
+        return "One or both of the DataFrames exceed the maximum row limit of 60. Cannot process the request."
     os.environ['GROQ_API_KEY'] = st.session_state['groq_api_key']
     api_key = os.environ.get("GROQ_API_KEY")
 
@@ -54,8 +54,8 @@ def llama3_generate(available_teachers, available_rooms):
         return f"An error occurred: {str(e)}"
 
 def openai_generate(available_teachers, available_rooms):
-    if len(available_teachers) > 50 or len(available_rooms) > 50:
-        return "One or both of the DataFrames exceed the maximum row limit of 50. Cannot process the request."
+    if len(available_teachers) > 100 or len(available_rooms) > 100:
+        return "One or both of the DataFrames exceed the maximum row limit of 100. Cannot process the request."
     os.environ['OPENAI_API_KEY'] = st.session_state['openai_api_key']
     client_openai = OpenAI()
 
@@ -120,8 +120,8 @@ def generate(available_teachers, available_rooms, model_choice):
         return f"Error during generation: {str(e)} 🚨"
 
 def llama3_recommendation(available_teachers, available_rooms, generated_table):
-    if len(available_teachers) > 50 or len(available_rooms) > 50:
-        return "One or both of the DataFrames exceed the maximum row limit of 50. Cannot process the request."
+    if len(available_teachers) > 60 or len(available_rooms) > 60:
+        return "One or both of the DataFrames exceed the maximum row limit of 60. Cannot process the request."
     os.environ['GROQ_API_KEY'] = st.session_state['groq_api_key']
     api_key = os.environ.get("GROQ_API_KEY")
 
@@ -157,8 +157,8 @@ def llama3_recommendation(available_teachers, available_rooms, generated_table):
         return f"An error occurred: {str(e)}"
 
 def openai_recommendation(available_teachers, available_rooms, generated_table):
-    if len(available_teachers) > 50 or len(available_rooms) > 50:
-        return "One or both of the DataFrames exceed the maximum row limit of 50. Cannot process the request."
+    if len(available_teachers) > 100 or len(available_rooms) > 100:
+        return "One or both of the DataFrames exceed the maximum row limit of 100. Cannot process the request."
     os.environ['OPENAI_API_KEY'] = st.session_state['openai_api_key']
     client_openai = OpenAI()
     system_role = f'''
@@ -214,8 +214,8 @@ def get_recommendation(available_teachers, available_rooms, generated_table, mod
         return f"Error during generation: {str(e)} 🚨"
 
 def llama3_mistakes(available_teachers, available_rooms, generated_table):
-    if len(available_teachers) > 50 or len(available_rooms) > 50:
-        return "One or both of the DataFrames exceed the maximum row limit of 50. Cannot process the request."
+    if len(available_teachers) > 60 or len(available_rooms) > 60:
+        return "One or both of the DataFrames exceed the maximum row limit of 60. Cannot process the request."
     os.environ['GROQ_API_KEY'] = st.session_state['groq_api_key']
     api_key = os.environ.get("GROQ_API_KEY")
 
@@ -258,8 +258,8 @@ def llama3_mistakes(available_teachers, available_rooms, generated_table):
         return f"An error occurred: {str(e)}"
 
 def openai_mistakes(available_teachers, available_rooms, generated_table):
-    if len(available_teachers) > 50 or len(available_rooms) > 50:
-        return "One or both of the DataFrames exceed the maximum row limit of 50. Cannot process the request."
+    if len(available_teachers) > 100 or len(available_rooms) > 100:
+        return "One or both of the DataFrames exceed the maximum row limit of 100. Cannot process the request."
     os.environ['OPENAI_API_KEY'] = st.session_state['openai_api_key']
     client_openai = OpenAI()
     system_role = f'''
@@ -331,8 +331,8 @@ def get_mistakes(available_teachers, available_rooms, generated_table, model_cho
         return f"Error during generation: {str(e)} 🚨"
 
 def custom_llama3_generate(available_teachers, available_rooms, basic_info, teacher_info, room_info, output_format):
-    if len(available_teachers) > 50 or len(available_rooms) > 50:
-        return "One or both of the DataFrames exceed the maximum row limit of 50. Cannot process the request."
+    if len(available_teachers) > 60 or len(available_rooms) > 60:
+        return "One or both of the DataFrames exceed the maximum row limit of 60. Cannot process the request."
     os.environ['GROQ_API_KEY'] = st.session_state['groq_api_key']
     api_key = os.environ.get("GROQ_API_KEY")
 
@@ -378,8 +378,8 @@ def custom_llama3_generate(available_teachers, available_rooms, basic_info, teac
         return f"An error occurred: {str(e)}"
 
 def custom_openai_generate(available_teachers, available_rooms, basic_info, teacher_info, room_info, output_format):
-    if len(available_teachers) > 50 or len(available_rooms) > 50:
-        return "One or both of the DataFrames exceed the maximum row limit of 50. Cannot process the request."
+    if len(available_teachers) > 100 or len(available_rooms) > 100:
+        return "One or both of the DataFrames exceed the maximum row limit of 100. Cannot process the request."
     os.environ['OPENAI_API_KEY'] = st.session_state['openai_api_key']
     client_openai = OpenAI()
     system_role = f'''
@@ -454,8 +454,8 @@ def custom_generate(available_teachers, available_rooms, basic_info, teacher_inf
 
 
 def change_table_llama3_generate(available_teachers, available_rooms, generated_table, changing):
-    if len(available_teachers) > 50 or len(available_rooms) > 50:
-        return "One or both of the DataFrames exceed the maximum row limit of 50. Cannot process the request."
+    if len(available_teachers) > 60 or len(available_rooms) > 60:
+        return "One or both of the DataFrames exceed the maximum row limit of 60. Cannot process the request."
     os.environ['GROQ_API_KEY'] = st.session_state['groq_api_key']
     api_key = os.environ.get("GROQ_API_KEY")
 
@@ -493,8 +493,8 @@ def change_table_llama3_generate(available_teachers, available_rooms, generated_
         return f"An error occurred: {str(e)}"
 
 def change_table_openai_generate(available_teachers, available_rooms, generated_table, changing):
-    if len(available_teachers) > 50 or len(available_rooms) > 50:
-        return "One or both of the DataFrames exceed the maximum row limit of 50. Cannot process the request."
+    if len(available_teachers) > 100 or len(available_rooms) > 100:
+        return "One or both of the DataFrames exceed the maximum row limit of 100. Cannot process the request."
     os.environ['OPENAI_API_KEY'] = st.session_state['openai_api_key']
     client_openai = OpenAI()
     system_role = f'''
