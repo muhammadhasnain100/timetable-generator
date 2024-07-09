@@ -647,7 +647,7 @@ if 'page' in st.session_state:
         if st.button('Generate Timetable 🚀', help="Click to generate the timetable using selected model"):
             # Check for file uploads and sufficient text length
             if teachers_file and rooms_file and all(
-                    count_words(text) >= 10 for text in [basic_info, teacher_info, room_info, output_format]):
+                    count_words(text) >= 100 for text in [basic_info, teacher_info, room_info, output_format]):
                 available_teachers = pd.read_csv(teachers_file)
                 available_rooms = pd.read_csv(rooms_file)
 
